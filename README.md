@@ -25,6 +25,7 @@ Follow these steps to set up and run the Django Weather API:
 git clone https://github.com/your-username/django-weather-api.git
 cd django-weather-api
 ```
+    
     Install the required Python packages (preferably in a virtual environment):
 
 ```python
@@ -36,15 +37,15 @@ pip install -r requirements.txt
         Open the settings.py file in your Django project.
 
         Add 'corsheaders' to the INSTALLED_APPS list:
-
-    ```python
-
+        
+```python
 INSTALLED_APPS = [
     # Other installed apps...
     'corsheaders',
 ]
 ```
     Add the CorsMiddleware to the MIDDLEWARE list (should be placed as high as possible):
+    
 
 ```python
 
@@ -53,22 +54,26 @@ MIDDLEWARE = [
     # Other middleware...
 ]
 ```
+    
     Configure CORS settings:
+    
 
 ```python
 
     # Allow requests from all origins (for development purposes)
     CORS_ALLOW_ALL_ORIGINS = True
 ```
+    
     Note: In a production environment, it is recommended to specify specific origins rather than allowing all origins.
 
     Run the Django development server:
 
 ```python
-
 python manage.py runserver
 ```
+
 The Django Weather API should now be running at http://localhost:8000.
+
 ## API Endpoints
 
 The Django Weather API provides the following endpoint:
