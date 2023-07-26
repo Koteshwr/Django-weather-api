@@ -1,6 +1,6 @@
-import requests
-from django.http import JsonResponse
 
+from django.http import JsonResponse
+import requests
 def get_weather_data(request):
     if request.method == 'GET':
         location = request.GET.get('location', '')
